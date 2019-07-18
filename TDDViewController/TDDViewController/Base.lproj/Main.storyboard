@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4HC-mj-Po1">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Country Details View Controller-->
+        <scene sceneID="2TD-xt-3m0">
+            <objects>
+                <viewController storyboardIdentifier="CountryDetailsViewController" id="4HC-mj-Po1" customClass="CountryDetailsViewController" customModule="TDDViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eBi-Pf-x9t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNd-3O-rEC">
+                                <rect key="frame" x="0.0" y="84" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0f-Yw-PCL">
+                                <rect key="frame" x="0.0" y="145" width="414" height="143.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="e0f-Yw-PCL" firstAttribute="top" secondItem="jNd-3O-rEC" secondAttribute="bottom" constant="40" id="8eq-9E-0zx"/>
+                            <constraint firstItem="jNd-3O-rEC" firstAttribute="top" secondItem="TvD-T8-kaJ" secondAttribute="top" constant="40" id="Khf-te-uCH"/>
+                            <constraint firstItem="jNd-3O-rEC" firstAttribute="leading" secondItem="TvD-T8-kaJ" secondAttribute="leading" id="T1N-bu-lat"/>
+                            <constraint firstItem="TvD-T8-kaJ" firstAttribute="trailing" secondItem="jNd-3O-rEC" secondAttribute="trailing" id="UGM-TI-PEw"/>
+                            <constraint firstItem="TvD-T8-kaJ" firstAttribute="trailing" secondItem="e0f-Yw-PCL" secondAttribute="trailing" id="XXU-5u-OiV"/>
+                            <constraint firstItem="e0f-Yw-PCL" firstAttribute="leading" secondItem="TvD-T8-kaJ" secondAttribute="leading" id="dhh-AF-HmN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TvD-T8-kaJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="countryFlagLabel" destination="e0f-Yw-PCL" id="VWs-zJ-fht"/>
+                        <outlet property="countryNameLabel" destination="jNd-3O-rEC" id="ZNY-bE-JIy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="48U-d6-xHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="174"/>
+        </scene>
+    </scenes>
+</document>

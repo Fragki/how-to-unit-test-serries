@@ -25,9 +25,15 @@ class TestingErrorsTests: XCTestCase {
         let fizzBuzzCalculator = FizzBuzzThrow()
         let input = 3
 
-        assertThrow(try fizzBuzzCalculator.fizzBuzz(input), throws: FizzBuzzThrow.FizzBuzzError.fizzError)
+        var thrownError: Error?
+        
+        XCTAssertThrowsError(try fizzBuzzCalculator.fizzBuzz(input)) {
+                                thrownError = $0
+        }
+        
+        XCTAssertEqual(FizzBuzzThrow.FizzBuzzError.fizzError, thrownError as? FizzBuzzThrow.FizzBuzzError)
     }
-
+    
     func test_fizzBuzz_multipleOf3() {
         let fizzBuzzCalculator = FizzBuzzThrow()
         let input = 2 * 3
